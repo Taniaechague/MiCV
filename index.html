@@ -6,6 +6,7 @@
     <title>CV de Tania Echagüe</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         /* General */
         body {
@@ -18,76 +19,91 @@
 
         /* Container */
         .container {
-            max-width: 900px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1200px;
             margin: auto;
             background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
         }
 
-        /* Header */
-        h1 {
-            color: #2c3e50;
-            font-size: 36px;
-            margin-top: 0;
+        /* Left Column */
+        .left-column {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
         }
 
-        .header-info {
+        .left-column img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+            margin-bottom: 20px;
+        }
+
+        .left-column h1 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .left-column p {
             font-size: 16px;
             color: #7f8c8d;
         }
 
-        /* Links */
-        .link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
+        .left-column .links {
+            font-size: 18px;
+            margin-top: 20px;
         }
 
-        .link:hover {
+        .left-column .links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .left-column .links a:hover {
             text-decoration: underline;
         }
 
-        /* Image */
-        img {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-            border: 3px solid #3498db;
+        /* Right Column */
+        .right-column {
+            width: 65%;
+            padding: 20px;
         }
 
-        /* Section Titles */
         h2 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            font-size: 22px;
-            color: #2c3e50;
+            font-size: 24px;
+            color: #3498db;
+            margin-bottom: 15px;
         }
 
-        /* Section */
-        .section {
-            margin-top: 30px;
-            text-align: left;
+        h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
         }
 
-        /* List */
         ul {
             list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 8px;
+            padding-left: 0;
             font-size: 16px;
         }
 
-        li::before {
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
             content: "🔹 ";
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             margin-top: 50px;
@@ -98,91 +114,92 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
+                flex-direction: column;
                 padding: 20px;
             }
 
-            h1 {
-                font-size: 28px;
+            .left-column {
+                width: 100%;
+                margin-bottom: 20px;
             }
 
-            .header-info {
-                font-size: 14px;
-            }
-
-            .section {
-                margin-top: 20px;
-            }
-
-            ul li {
-                font-size: 14px;
+            .right-column {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>👩🏻‍💻 Tania Echagüe</h1>
-        <img src="fotoperfil.jpg" alt="Foto de perfil">
-        <p class="header-info">📍 Center, Montevideo, Uruguay | 📧 tania.echague@gmail.com | 📞 +59898321677</p>
-        <p class="header-info">🌐 <a class="link" href="https://github.com/Taniaechague" target="_blank">GitHub</a> | 
-            <a class="link" href="https://www.linkedin.com/in/tania-echagüe-053aa1342/" target="_blank">LinkedIn</a>
-        </p>
-
-        <div class="section">
-            <h2>🎯 About me</h2>
-            <p>Economist | Data Analytics | Data Scientist</p>
-            <p>Candidate for Master in International Economics (Udelar)</p>
-            <p>Passionate about data analysis, data science and economics</p>
-            <p>Continuous student of Data Visualization and Machine Learning</p>
-            <p>Python, SQL, VSC, Tableau, R</p>
+        <!-- Left Column -->
+        <div class="left-column">
+            <img src="fotoperfil.jpg" alt="Foto de perfil">
+            <h1>👩🏻‍💻 Tania Echagüe</h1>
+            <p>📍 Center, Montevideo, Uruguay | 📧 tania.echague@gmail.com | 📞 +59898321677</p>
+            <div class="links">
+                <a href="https://github.com/Taniaechague" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/tania-echagüe-053aa1342/" target="_blank">LinkedIn</a>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>💼 Work experience</h2>
-            <h3>📌 Professional Economist, Gr. 12 - UETSS</h3>
-            <p>📅 Nov, 2013 - Current</p>
-            <ul>
-                <li>Micro and macroeconomic analysis with focus on Sectors of Activity </li>
-                <li>ETL, EDA and Modeling</li>
-                <li>Data Management and Database Design</li>
-                <li>Visualization Analysis</li>
-                <li>Impact evaluation of Policies and Programs with Econometric techniques</li>
-                <li>Preparation of Statistical-Economic Reports for Informed Decision Making</li>
-            </ul>
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="section">
+                <h2>🎯 About me</h2>
+                <p>Economist | Data Analytics | Data Scientist</p>
+                <p>Candidate for Master in International Economics (Udelar)</p>
+                <p>Passionate about data analysis, data science and economics</p>
+                <p>Continuous student of Data Visualization and Machine Learning</p>
+                <p>Python, SQL, VSC, Tableau, R</p>
+            </div>
 
-            <h3>📌 Economics and Finance Teacher - UTU</h3>
-            <p>📅 2012 - 2014</p>
-        </div>
+            <div class="section">
+                <h2>💼 Work experience</h2>
+                <h3>📌 Professional Economist, Gr. 12 - UETSS</h3>
+                <p>📅 Nov, 2013 - Current</p>
+                <ul>
+                    <li>Micro and macroeconomic analysis with focus on Sectors of Activity </li>
+                    <li>ETL, EDA and Modeling</li>
+                    <li>Data Management and Database Design</li>
+                    <li>Visualization Analysis</li>
+                    <li>Impact evaluation of Policies and Programs with Econometric techniques</li>
+                    <li>Preparation of Statistical-Economic Reports for Informed Decision Making</li>
+                </ul>
 
-        <div class="section">
-            <h2>🎓 Education</h2>
-            <ul>
-                <li><strong>📌 Graduate in Economics</strong> - UCUDAL (2007 - 2012)</li>
-                <li><strong>📌 Data Scientist</strong> - IBM (2023 - 2025)</li>
-                <li><strong>📌 Master in Economics</strong> - Udelar (Estimated completion date: Feb, 2026)</li>
-                <li><strong>📌 Python</strong> - IBM (February 2024 to March 2025)</li>
-                <li><strong>📌 R</strong> - DINAE (May to December 2024)</li>
-                <li><strong>📌 SQL</strong> - UDE (September to October 2021)</li>
-                <li><strong>📌 Data Management</strong> - AGESIC (August to September 2023)</li>
-                <li><strong>📌 Big Data and skills gaps</strong> - OIT/Cinterfor (September to December 2022)</li>
-                <li><strong>📌 STATA</strong> - BIOS (October to December 2021)</li>
-                <li><strong>📌 Institutional capacity building for effective labour market information systems</strong> - OIT (November to December 2020)</li>
-                <li><strong>📌 Metadata course</strong> - INE (August 2018)</li>
-                <li><strong>📌 Georeferencing course</strong> - INE (December 2017)</li>
-                <li><strong>📌 Diploma in gender and public policies</strong> - Flacso (March to December 2016)</li>
-                <li><strong>📌 Policy Impact Assessment</strong> - University of Montevideo, ALJPAL (March 2014)</li>
-                <li><strong>📌 First Certificate in English</strong> - University of Cambridge (November 2011)</li>
-            </ul>
-        </div>
+                <h3>📌 Economics and Finance Teacher - UTU</h3>
+                <p>📅 2012 - 2014</p>
+            </div>
 
-        <div class="section">
-            <h2>🛠️ Skills</h2>
-            <p>Python | SQL | R | Tableau | Scikit-learn | TensorFlow | PyTorch | Pandas | Numpy | Matplotlib | Seaborn | Plotly</p>
-            <p>ETL | EDA | Data Analysis | Data Visualization | Machine Learning | Preparation of reports for decision making</p>
-        </div>
+            <div class="section">
+                <h2>🎓 Education</h2>
+                <ul>
+                    <li><strong>📌 Graduate in Economics</strong> - UCUDAL (2007 - 2012)</li>
+                    <li><strong>📌 Data Scientist</strong> - IBM (2023 - 2025)</li>
+                    <li><strong>📌 Master in Economics</strong> - Udelar (Estimated completion date: Feb, 2026)</li>
+                    <li><strong>📌 Python</strong> - IBM (February 2024 to March 2025)</li>
+                    <li><strong>📌 R</strong> - DINAE (May to December 2024)</li>
+                    <li><strong>📌 SQL</strong> - UDE (September to October 2021)</li>
+                    <li><strong>📌 Data Management</strong> - AGESIC (August to September 2023)</li>
+                    <li><strong>📌 Big Data and skills gaps</strong> - OIT/Cinterfor (September to December 2022)</li>
+                    <li><strong>📌 STATA</strong> - BIOS (October to December 2021)</li>
+                    <li><strong>📌 Institutional capacity building for effective labour market information systems</strong> - OIT (November to December 2020)</li>
+                    <li><strong>📌 Metadata course</strong> - INE (August 2018)</li>
+                    <li><strong>📌 Georeferencing course</strong> - INE (December 2017)</li>
+                    <li><strong>📌 Diploma in gender and public policies</strong> - Flacso (March to December 2016)</li>
+                    <li><strong>📌 Policy Impact Assessment</strong> - University of Montevideo, ALJPAL (March 2014)</li>
+                    <li><strong>📌 First Certificate in English</strong> - University of Cambridge (November 2011)</li>
+                </ul>
+            </div>
 
-        <div class="footer">
-            <p>📄 <a class="link" href="https://raw.githubusercontent.com/Taniaechague/CV/main/CV_TE.pdf" target="_blank">Download CV in PDF</a></p>
+            <div class="section">
+                <h2>🛠️ Skills</h2>
+                <p>Python | SQL | R | Tableau | Scikit-learn | TensorFlow | PyTorch | Pandas | Numpy | Matplotlib | Seaborn | Plotly</p>
+                <p>ETL | EDA | Data Analysis | Data Visualization | Machine Learning | Preparation of reports for decision making</p>
+            </div>
+
+            <div class="footer">
+                <p>📄 <a href="https://raw.githubusercontent.com/Taniaechague/CV/main/CV_TE.pdf" target="_blank">Download CV in PDF</a></p>
+            </div>
         </div>
     </div>
 </body>
